@@ -1,9 +1,12 @@
-import Header from "./components/Header/Header";
+import Header from "@components/Header";
+// import AnimationInfo from "@components/AnimationInfo";
 
 const App = () => (
-  <div className="App">
+  <main className="App">
     <Header />
-  </div>
+    {/* <AnimationInfo /> */}
+    {/* <Footer /> */}
+  </main>
 );
 
 export default App;
