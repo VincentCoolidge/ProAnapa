@@ -1,0 +1,15 @@
+.heading_3_youtubeinfo {
+  padding-bottom: 25px;
+}
+
+.container_video_team {
+  padding-top: 25px;
+  display: flex;
+  gap: 42px;
+  justify-content: space-around;
+}
+
+.video_team {
+  height: 455px;
+  width: 502px;
+}

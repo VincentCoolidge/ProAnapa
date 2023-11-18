@@ -1,15 +1,12 @@
+import Logo from "@components/Logo";
+
 import "./styles.css";
 
 const Header = () => {
   return (
     <header className="header_container">
       <nav className="header_nav">
-        <div className="header_logo">
-          <a className="header_logo_link" href="/#">
-            ProAnapa
-            <div className="header_logo_link_circle" />
-          </a>
-        </div>
+        <Logo />
         <ul className="header_list">
           <li className="header_list_element">
             <a className="header_list_element_link" href="/#">

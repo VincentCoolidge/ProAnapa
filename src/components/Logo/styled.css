@@ -1,0 +1,19 @@
+.logo_link {
+  color: #fffdf9;
+  font-family: Nunito Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  position: relative;
+}
+
+.logo_link_circle {
+  background: #fdbd21;
+  border-radius: 50%;
+  bottom: 8px;
+  height: 5px;
+  position: absolute;
+  right: -7px;
+  width: 5px;
+}

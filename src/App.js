@@ -1,12 +1,20 @@
 import Header from "@components/Header";
-// import AnimationInfo from "@components/AnimationInfo";
+import Team from "@components/Team";
+import YouTubeInfo from "@components/YouTubeInfo";
+import Footer from "@components/Footer";
 
 const App = () => (
-  <main className="App">
+  <div className="app">
     <Header />
-    {/* <AnimationInfo /> */}
-    {/* <Footer /> */}
-  </main>
+    <main className="layout">
+      <div className="margin" />
+      <Team />
+      <div className="margin" />
+      <YouTubeInfo />
+      <div className="margin" />
+    </main>
+    <Footer />
+  </div>
 );
 
 export default App;

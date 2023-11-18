@@ -1,4 +1,16 @@
 .footer_container {
   background-color: #18161a;
   height: 500px;
+  color: #fffcf7;
+}
+
+.layout_footer {
+  max-width: 1587px;
+  margin: 0 auto;
+  padding: 50px 0 27px;
+}
+
+.box_form_footer {
+  border-bottom: 1px solid #898883;
+  padding: 0 65px;
 }

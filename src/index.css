@@ -2,9 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: Nunito Sans;
 }
 
 a {
   text-decoration: none;
+}
+
+.layout {
+  margin: 0 auto;
+  max-width: 1587px;
+  color: #18161a;
+}
+
+.margin {
+  height: 160px;
+}
+
+.heading_3 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
 }
