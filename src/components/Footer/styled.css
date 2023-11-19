@@ -7,10 +7,20 @@
 .layout_footer {
   max-width: 1587px;
   margin: 0 auto;
-  padding: 50px 0 27px;
+  padding: 0px 0 27px;
 }
 
 .box_form_footer {
   border-bottom: 1px solid #898883;
-  padding: 0 65px;
+  padding: 50px 65px 40px;
+}
+
+.box_contacts_footer {
+  padding: 40px 65px 0;
+}
+
+.box_logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

@@ -1,3 +1,6 @@
+import Logo from "@components/Logo";
+import SocialLinks from "@components/SocialLinks";
+
 import "./styled.css";
 
 const Footer = () => {
@@ -10,7 +13,13 @@ const Footer = () => {
             <br /> приносить ваша недвижимость
           </h3>
         </div>
-        <div className="box_contacts_footer"></div>
+        <div className="box_contacts_footer">
+          <div className="box_logo">
+            <Logo />
+            <SocialLinks />
+          </div>
+          <div></div>
+        </div>
       </div>
     </footer>
   );
