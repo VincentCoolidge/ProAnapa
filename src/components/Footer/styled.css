@@ -1,13 +1,20 @@
 .footer_container {
   background-color: #18161a;
-  height: 500px;
   color: #fffcf7;
+}
+
+.box_info_footer a,
+span {
+  color: #fffcf7;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .layout_footer {
   max-width: 1587px;
   margin: 0 auto;
-  padding: 0px 0 27px;
 }
 
 .box_form_footer {
@@ -16,11 +23,46 @@
 }
 
 .box_contacts_footer {
-  padding: 40px 65px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 65px 35px;
 }
 
 .box_logo {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.box_info_footer {
+  display: flex;
+  gap: 100px;
+}
+
+.adress_info_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adress_tel_footer {
+  font-weight: 800;
+}
+
+.legal_adress_info_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.box_info_left_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.box_info_right_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
