@@ -1,0 +1,110 @@
+.root_ourServices {
+}
+
+.grid_ourServices {
+  padding: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.box_info_first_our_service {
+  width: 503px;
+  height: 546px;
+  padding-top: 156px;
+}
+
+.text-our_services {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.pre-our_services {
+  height: 22.4px;
+}
+
+.box_our_service {
+  height: 546px;
+  width: 502px;
+  background: #fff;
+  box-shadow: 0px 0px 12px 0px rgba(59, 58, 61, 0.1);
+  z-index: 10;
+}
+
+.box_our_service:hover {
+  box-shadow: 0px 0px 15px 0px rgba(59, 58, 61, 0.3);
+}
+
+.box_our_service_background_img_1 {
+  background-image: url("@assets/ourServices/services-01.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_background_img_2 {
+  background-image: url("@assets/ourServices/services-02.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_background_img_3 {
+  background-image: url("@assets/ourServices/services-03.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_background_img_4 {
+  background-image: url("@assets/ourServices/services-04.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_background_img_5 {
+  background-image: url("@assets/ourServices/services-05.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_background_img_6 {
+  background-image: url("@assets/ourServices/services-06.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_background_img_7 {
+  background-image: url("@assets/ourServices/services-07.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_background_img_8 {
+  background-image: url("@assets/ourServices/services-08.jpg");
+  width: 100%;
+  height: 340px;
+}
+
+.box_our_service_title {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  width: 202px;
+  height: 55px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  top: -30px;
+  background: #fff;
+  padding: 14px 0 15px;
+}
+
+.box_our_service_desc {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 0px 31px 0 30px;
+}
