@@ -1,5 +1,5 @@
 .element_slider_box {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 40px;
