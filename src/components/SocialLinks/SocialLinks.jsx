@@ -3,9 +3,14 @@ import WhatsApp from "@assets/whatsApp.svg";
 
 import "./styled.css";
 
-const SocialLinks = () => (
+const SocialLinks = ({ color = "white" }) => (
   <div className="container_socialLinks">
-    <span className="title_socialLinks">Написать нам</span>
+    <span
+      style={{ color: color === "white" ? "#FFFCF7" : "#18161A" }}
+      className="title_socialLinks"
+    >
+      Написать нам
+    </span>
     <div className="box_icons_socialLinks">
       <a href="https://t.me/ProAnapu" target="_blank" rel="noreferrer">
         <img className="img_SocialNetworks" alt="telegram" src={Telegram} />

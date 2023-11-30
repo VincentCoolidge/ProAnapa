@@ -26,15 +26,26 @@
 }
 
 .box_our_service {
-  height: 546px;
-  width: 502px;
   background: #fff;
   box-shadow: 0px 0px 12px 0px rgba(59, 58, 61, 0.1);
+  height: 546px;
+  position: relative;
+  width: 502px;
   z-index: 10;
 }
 
 .box_our_service:hover {
   box-shadow: 0px 0px 15px 0px rgba(59, 58, 61, 0.3);
+}
+
+.svg-arrow_ourServices {
+  background-image: url("@assets/arrow.svg");
+  width: 35px;
+  height: 35px;
+}
+
+.box_our_service:hover .svg-arrow_ourServices {
+  background-image: url("@assets/arrowHover.svg");
 }
 
 .box_our_service_background_img_1 {
@@ -107,4 +118,23 @@
   font-weight: 400;
   line-height: 120%;
   padding: 0px 31px 0 30px;
+  position: relative;
+  top: -24px;
+}
+
+.box_our_service_arrow_link {
+  align-items: center;
+  bottom: 30px;
+  display: flex;
+  position: absolute;
+  right: 31px;
+  gap: 10px;
+}
+
+.more_box_our_service {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  color: #18161a;
 }

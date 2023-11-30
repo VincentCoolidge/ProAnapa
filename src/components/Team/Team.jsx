@@ -4,7 +4,9 @@ import logo from "@assets/ceo.webp";
 const Team = () => {
   return (
     <section className="container_team">
-      <h3 className="heading_3">Команда профессионалов</h3>
+      <h3 className="heading_3">
+        Команда профессионалов<span className="heading_3_circle">&bull;</span>
+      </h3>
       <p className="info_team">
         Мы ориентированы на непрерывный рост бизнеса и развитие сервиса.
         Стремимся оперативно отвечать на запросы, решать проблемы собственников

@@ -1,0 +1,110 @@
+.element_slider_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.element_slider_plan {
+  width: 501px;
+  height: 608px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.element_slider_plan_0 {
+  background-image: url("@assets/furnishing/plan/plan-01.png");
+}
+
+.element_slider_plan_1 {
+  background-image: url("@assets/furnishing/plan/plan-01.png");
+}
+
+.element_slider_plan_2 {
+  background-image: url("@assets/furnishing/plan/plan-01.png");
+}
+
+.element_slider_plan_3 {
+  background-image: url("@assets/furnishing/plan/plan-01.png");
+}
+
+.element_slider_plan_4 {
+  background-image: url("@assets/furnishing/plan/plan-01.png");
+}
+
+.element_slider_plan_5 {
+  background-image: url("@assets/furnishing/plan/plan-01.png");
+}
+
+.element_slider_plan_6 {
+  background-image: url("@assets/furnishing/plan/plan-01.png");
+}
+
+.element_slider_photo {
+  margin-top: 10px;
+  width: 1046px;
+  height: 663px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.element_slider_photo_0 {
+  background-image: url("@assets/furnishing/photo/plan-slide-01.jpg");
+}
+
+.element_slider_photo_1 {
+  background-image: url("@assets/furnishing/photo/plan-slide-02.jpg");
+}
+
+.element_slider_photo_2 {
+  background-image: url("@assets/furnishing/photo/plan-slide-03.jpg");
+}
+
+.element_slider_photo_3 {
+  background-image: url("@assets/furnishing/photo/plan-slide-04.jpg");
+}
+
+.element_slider_photo_4 {
+  background-image: url("@assets/furnishing/photo/plan-slide-05.jpg");
+}
+
+.element_slider_photo_5 {
+  background-image: url("@assets/furnishing/photo/plan-slide-06.jpg");
+}
+
+.element_slider_photo_6 {
+  background-image: url("@assets/furnishing/photo/plan-slide-07.jpg");
+}
+
+.box_navigation_Furnishing {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.button_nav_Furnishing {
+}
+
+.left_button_nav_Furnishing {
+  background-image: url("@assets/arrow.svg");
+  background-repeat: no-repeat;
+  width: 47px;
+  height: 47px;
+  transform: scale(1.25) rotate(180deg);
+  cursor: pointer;
+}
+
+.right_button_nav_Furnishing {
+  background-image: url("@assets/arrow.svg");
+  background-repeat: no-repeat;
+  width: 47px;
+  height: 47px;
+  transform: scale(1.25) rotate(0deg);
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+.left_button_nav_Furnishing:hover,
+.right_button_nav_Furnishing:hover {
+  background-image: url("@assets/arrowHover.svg");
+}

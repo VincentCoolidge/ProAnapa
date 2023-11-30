@@ -14,32 +14,32 @@ const YouTubeInfo = () => {
         >
           Youtube
         </a>{" "}
-        канале
+        канале<span className="heading_3_circle">&bull;</span>
       </h3>
       <div className="container_video_team">
         <iframe
           className="video_team"
           src="https://www.youtube.com/embed/gCHJtVvgOx4?si=cW2fYBU7JCffSGYm&amp;controls=0"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen={true}
         ></iframe>
         <iframe
           className="video_team"
           src="https://www.youtube.com/embed/7bCmayMVpPc?si=-ZIhPZAnmQWc8JGo"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen={true}
         ></iframe>
         <iframe
           className="video_team"
           src="https://www.youtube.com/embed/8YAC_g2t2kY?si=61WxgheZNVPImaf8"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen={true}
         ></iframe>
       </div>
     </section>
