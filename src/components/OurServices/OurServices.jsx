@@ -1,6 +1,18 @@
 import { dataOurServices } from "./mockData";
 
-import { Grid, BoxInfoFirst, Text, Pre, Box, BoxBackgroundImg } from "./styled";
+import {
+  Grid,
+  BoxInfoFirst,
+  Text,
+  Pre,
+  Box,
+  BoxBackgroundImg,
+  Title,
+  Desc,
+  BoxArrowLink,
+  More,
+  SvgArrow,
+} from "./styled";
 
 const OurServices = () => {
   return (
@@ -25,13 +37,13 @@ const OurServices = () => {
           return (
             <Box key={`our-services-${id}`}>
               <BoxBackgroundImg id={id} />
-              <div className="box_our_service_box">
-                <div className="box_our_service_title">{title}</div>
-                <div className="box_our_service_desc">{desc}</div>
-                <div className="box_our_service_arrow_link">
-                  <span className="more_box_our_service">Узнать подробнее</span>
-                  <div className="svg-arrow_ourServices" />
-                </div>
+              <div>
+                <Title>{title}</Title>
+                <Desc>{desc}</Desc>
+                <BoxArrowLink>
+                  <More>Узнать подробнее</More>
+                  <SvgArrow />
+                </BoxArrowLink>
               </div>
             </Box>
           );
