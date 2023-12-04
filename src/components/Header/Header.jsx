@@ -1,61 +1,54 @@
 import Logo from "@components/Logo";
+import Burger from "@assets/header/burger.svg";
 
-import "./styles.css";
+import {
+  Container,
+  Navigation,
+  List,
+  Element,
+  Link,
+  ElementPhone,
+  ElementPhoneLink,
+} from "./styled";
 
 const Header = () => {
   return (
-    <header className="header_container">
-      <nav className="header_nav">
+    <Container>
+      <Navigation>
         <Logo />
-        <ul className="header_list">
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Управление недвижимостью
-            </a>
-          </li>
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Подбор недвижимости
-            </a>
-          </li>
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Продажа
-            </a>
-          </li>
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Реинвестиция
-            </a>
-          </li>
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Арендаторам
-            </a>
-          </li>
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Ремонт
-            </a>
-          </li>
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Меблировка
-            </a>
-          </li>
-          <li className="header_list_element">
-            <a className="header_list_element_link" href="/#">
-              Консультации
-            </a>
-          </li>
-        </ul>
-        <div className="header_list_element_phone">
-          <a className="header_list_element_phone_link" href="tel:+79189333163">
+        <List>
+          <Element>
+            <Link href="/#">Управление недвижимостью</Link>
+          </Element>
+          <Element>
+            <Link href="/#">Подбор недвижимости</Link>
+          </Element>
+          <Element>
+            <Link href="/#">Продажа</Link>
+          </Element>
+          <Element>
+            <Link href="/#">Реинвестиция</Link>
+          </Element>
+          <Element>
+            <Link href="/#">Арендаторам</Link>
+          </Element>
+          <Element>
+            <Link href="/#">Ремонт</Link>
+          </Element>
+          <Element>
+            <Link href="/#">Меблировка</Link>
+          </Element>
+          <Element>
+            <Link href="/#">Консультации</Link>
+          </Element>
+        </List>
+        <ElementPhone>
+          <ElementPhoneLink href="tel:+79189333163">
             +7 918 933 31 63
-          </a>
-        </div>
-      </nav>
-    </header>
+          </ElementPhoneLink>
+        </ElementPhone>
+      </Navigation>
+    </Container>
   );
 };
 

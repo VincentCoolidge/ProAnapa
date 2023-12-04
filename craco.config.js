@@ -7,6 +7,7 @@ module.exports = {
     alias: {
       "@components": resolvePath("./src/components"),
       "@assets": resolvePath("./src/assets"),
+      "@globalStyle": resolvePath("./src/globalStyle.js"),
     },
   },
 };

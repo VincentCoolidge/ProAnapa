@@ -1,12 +1,12 @@
-import "./styled.css";
+import { Container, Link, Circle } from "./styled";
 
 const Logo = () => (
-  <div className="logo">
-    <a className="logo_link" href="/#">
+  <Container>
+    <Link href="/#">
       ProAnapa
-      <div className="logo_link_circle" />
-    </a>
-  </div>
+      <Circle className="logo_link_circle" />
+    </Link>
+  </Container>
 );
 
 export default Logo;
