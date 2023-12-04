@@ -1,35 +1,30 @@
 import { dataOurServices } from "./mockData";
 
-import "./styled.css";
-
-import Arrow from "@assets/arrow.svg";
+import { Grid, BoxInfoFirst, Text, Pre, Box, BoxBackgroundImg } from "./styled";
 
 const OurServices = () => {
   return (
-    <div className="root_ourServices">
+    <>
       <h3 className="heading_3">
         Наши услуги<span className="heading_3_circle">&bull;</span>
       </h3>
-      <div className="grid_ourServices">
+      <Grid>
         {dataOurServices.map(({ id, title, desc }) => {
           if (id === 0) {
             return (
-              <div
-                className="box_info_first_our_service"
-                key={`our-services-${id}`}
-              >
-                <p className="text-our_services">
+              <BoxInfoFirst key={`our-services-${id}`}>
+                <Text>
                   {title}
-                  <div className="pre-our_services" />
+                  <Pre />
                   {desc}
-                </p>
-              </div>
+                </Text>
+              </BoxInfoFirst>
             );
           }
 
           return (
-            <div className="box_our_service" key={`our-services-${id}`}>
-              <div className={`box_our_service_background_img_${id}`}></div>
+            <Box key={`our-services-${id}`}>
+              <BoxBackgroundImg id={id} />
               <div className="box_our_service_box">
                 <div className="box_our_service_title">{title}</div>
                 <div className="box_our_service_desc">{desc}</div>
@@ -38,11 +33,11 @@ const OurServices = () => {
                   <div className="svg-arrow_ourServices" />
                 </div>
               </div>
-            </div>
+            </Box>
           );
         })}
-      </div>
-    </div>
+      </Grid>
+    </>
   );
 };
 

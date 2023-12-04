@@ -10,7 +10,7 @@ import Reviews from "@components/Reviews";
 const App = () => (
   <div className="app">
     <Header />
-    {/* <main className="layout">
+    <main className="layout">
       <AnimationInfo />
       <div className="margin" />
       <OurServices />
@@ -23,8 +23,8 @@ const App = () => (
       <div className="margin" />
       <YouTubeInfo />
       <div className="margin" />
-    </main> */}
-    {/* <Footer /> */}
+    </main>
+    <Footer />
   </div>
 );
 
