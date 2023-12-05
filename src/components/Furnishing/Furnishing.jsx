@@ -14,13 +14,15 @@ import "swiper/css/scrollbar";
 
 import "./styled.css";
 
+import { BoxNavigaton, ElementSliderPlan, ElementSliderPhoto } from "./styled";
+
 const Furnishing = () => {
   return (
     <div>
       <h3 className="heading_3">
         Пример меблировкиa<span className="heading_3_circle">&bull;</span>
       </h3>
-      <div className="root_slider_Furnishing">
+      <div>
         <Swiper
           modules={[Navigation, Parallax]}
           spaceBetween={50}
@@ -41,16 +43,14 @@ const Furnishing = () => {
               className="element_slider_box"
               key={`element_slider_${i}`}
             >
-              <div className={`element_slider_plan element_slider_plan_${i}`} />
-              <div
-                className={`element_slider_photo element_slider_photo_${i}`}
-              />
+              <ElementSliderPlan index={i} />
+              <ElementSliderPhoto index={i} />
             </SwiperSlide>
           ))}
-          <nav className="box_navigation_Furnishing">
+          <BoxNavigaton>
             <SwiperButtonPrev />
             <SwiperButtonNext />
-          </nav>
+          </BoxNavigaton>
         </Swiper>
       </div>
     </div>

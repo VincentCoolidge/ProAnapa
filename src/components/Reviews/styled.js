@@ -1,11 +1,20 @@
-.iframe_Reviews {
+import styled from "styled-components";
+
+export const Box = styled.div`
+  width: 700px;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+`;
+
+export const Iframe = styled.iframe`
   width: 100%;
   height: 100%;
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
-}
+`;
 
-.link_Reviews {
+export const Link = styled.a`
   box-sizing: border-box;
   text-decoration: none;
   color: #b3b3b3;
@@ -24,11 +33,4 @@
   white-space: nowrap;
   padding: 0 16px;
   box-sizing: border-box;
-}
-
-.box_Reviews {
-  width: 700px;
-  height: 800px;
-  overflow: hidden;
-  position: relative;
-}
+`;
