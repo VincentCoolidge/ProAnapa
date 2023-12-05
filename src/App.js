@@ -6,24 +6,26 @@ import Furnishing from "@components/Furnishing";
 import OurServices from "@components/OurServices";
 import AnimationInfo from "@components/AnimationInfo";
 import Reviews from "@components/Reviews";
+import Margin from "@components/Margin";
+import Layout from "@components/Layout";
 
 const App = () => (
   <div className="app">
     <Header />
-    <main className="layout">
+    <Layout>
       <AnimationInfo />
-      <div className="margin" />
+      <Margin />
       <OurServices />
-      <div className="margin" />
+      <Margin />
       <Furnishing />
-      <div className="margin" />
+      <Margin />
       <Team />
-      <div className="margin" />
+      <Margin />
       <Reviews />
-      <div className="margin" />
+      <Margin />
       <YouTubeInfo />
-      <div className="margin" />
-    </main>
+      <Margin />
+    </Layout>
     <Footer />
   </div>
 );

@@ -53,17 +53,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
-  
-  .layout {
-    margin: 0 auto;
-    max-width: 1587px;
-    color: #18161a;
-  }
-  
-  .margin {
-    height: 160px;
-  }
-  
+    
   .heading_1 {
     font-size: 90px;
     font-style: normal;
