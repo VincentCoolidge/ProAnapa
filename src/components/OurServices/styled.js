@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screenLt_360 } from "@globalStyle";
 
 import Services01 from "@assets/ourServices/services-01.jpg";
 import Services02 from "@assets/ourServices/services-02.jpg";
@@ -35,17 +36,34 @@ const handleImgType = (id) => {
   }
 };
 
+export const Container = styled.div`
+  ${screenLt_360} {
+    padding: 0 20px;
+  }
+`;
+
 export const Grid = styled.div`
   padding: 10px 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+
+  ${screenLt_360} {
+    padding-top: 0px;
+    gap: 20px;
+  }
 `;
 
 export const BoxInfoFirst = styled.div`
   width: 503px;
   height: 546px;
   padding-top: 156px;
+
+  ${screenLt_360} {
+    padding-top: 30px;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 export const Text = styled.p`
@@ -80,12 +98,24 @@ export const Box = styled.div`
   &:hover ${SvgArrow} {
     background-image: url(${svgArrowHover});
   }
+
+  ${screenLt_360} {
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 export const BoxBackgroundImg = styled.div`
   width: 100%;
   height: 340px;
-  ${({ id }) => handleImgType(id)}
+  ${({ id }) => handleImgType(id)};
+
+  ${screenLt_360} {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 230px;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.div`

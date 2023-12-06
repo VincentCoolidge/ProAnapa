@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { screenLt_360 } from "@globalStyle";
+
 import Arrow from "@assets/arrow.svg";
 import ArrowHover from "@assets/arrowHover.svg";
 
@@ -42,6 +44,12 @@ const handleImgPhoto = (index) => {
   }
 };
 
+export const Container = styled.div`
+  ${screenLt_360} {
+    padding: 0 20px;
+  }
+`;
+
 export const BoxNavigaton = styled.nav`
   display: flex;
   gap: 20px;
@@ -71,7 +79,12 @@ export const ElementSliderPlan = styled.div`
   height: 608px;
   background-size: contain;
   background-repeat: no-repeat;
-  ${({ index }) => handleImgPlan(index)}
+  ${({ index }) => handleImgPlan(index)};
+
+  ${screenLt_360} {
+    height: 407px;
+    width: 100%;
+  }
 `;
 
 export const ElementSliderPhoto = styled.div`
@@ -80,5 +93,10 @@ export const ElementSliderPhoto = styled.div`
   height: 663px;
   background-size: contain;
   background-repeat: no-repeat;
-  ${({ index }) => handleImgPhoto(index)}
+  ${({ index }) => handleImgPhoto(index)};
+
+  ${screenLt_360} {
+    height: 215px;
+    width: 100%;
+  }
 `;

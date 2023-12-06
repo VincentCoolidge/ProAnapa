@@ -11,10 +11,10 @@ import Layout from "@components/Layout";
 
 const App = () => (
   <div className="app">
-    <Header />
+    {/* <Header /> */}
     <Layout>
-      <AnimationInfo />
-      <Margin />
+      {/* <AnimationInfo />
+      <Margin /> */}
       <OurServices />
       <Margin />
       <Furnishing />

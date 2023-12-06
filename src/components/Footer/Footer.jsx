@@ -12,6 +12,7 @@ import {
   LegalAddress,
   FormBox,
   ContactsBox,
+  LogoBox,
 } from "./styled";
 
 const Footer = () => (
@@ -24,10 +25,10 @@ const Footer = () => (
         </h3>
       </FormBox>
       <ContactsBox>
-        <div>
+        <LogoBox>
           <Logo />
           <SocialLinks />
-        </div>
+        </LogoBox>
         <BoxInfo>
           <AddressInfo>
             <AddressTel href="tel:+79189333163">+7 918 933 31 63</AddressTel>

@@ -73,6 +73,10 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+
+    ${screenLt_360} {
+      font-size: 30px;
+    }
   }
   
   .heading_3_circle {

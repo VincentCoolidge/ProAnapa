@@ -14,11 +14,16 @@ import "swiper/css/scrollbar";
 
 import "./styled.css";
 
-import { BoxNavigaton, ElementSliderPlan, ElementSliderPhoto } from "./styled";
+import {
+  BoxNavigaton,
+  ElementSliderPlan,
+  ElementSliderPhoto,
+  Container,
+} from "./styled";
 
 const Furnishing = () => {
   return (
-    <div>
+    <Container>
       <h3 className="heading_3">
         Пример меблировкиa<span className="heading_3_circle">&bull;</span>
       </h3>
@@ -53,7 +58,7 @@ const Furnishing = () => {
           </BoxNavigaton>
         </Swiper>
       </div>
-    </div>
+    </Container>
   );
 };
 

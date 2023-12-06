@@ -1,10 +1,22 @@
 import styled from "styled-components";
+import { screenLt_360 } from "@globalStyle";
+
+export const Container = styled.div`
+  ${screenLt_360} {
+    padding: 0 20px;
+  }
+`;
 
 export const Box = styled.div`
   width: 700px;
   height: 800px;
   overflow: hidden;
   position: relative;
+
+  ${screenLt_360} {
+    width: 100%;
+    height: 700px;
+  }
 `;
 
 export const Iframe = styled.iframe`
@@ -12,6 +24,9 @@ export const Iframe = styled.iframe`
   height: 100%;
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
+
+  ${screenLt_360} {
+  }
 `;
 
 export const Link = styled.a`

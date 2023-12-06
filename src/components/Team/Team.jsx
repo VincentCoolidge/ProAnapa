@@ -1,9 +1,17 @@
 import logo from "@assets/ceo.webp";
 
-import { Desc, Container, CEOImg, CEOTitle, CEODesc, Box } from "./styled";
+import {
+  Desc,
+  Container,
+  CEOImg,
+  CEOTitle,
+  CEODesc,
+  Box,
+  Section,
+} from "./styled";
 
 const Team = () => (
-  <section>
+  <Section>
     <h3 className="heading_3">
       Команда профессионалов<span className="heading_3_circle">&bull;</span>
     </h3>
@@ -27,7 +35,7 @@ const Team = () => (
         </Box>
       ))}
     </Container>
-  </section>
+  </Section>
 );
 
 export default Team;

@@ -1,12 +1,11 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/style-prop-object */
-import { Box, Iframe, Link } from "./styled";
+import { Box, Iframe, Link, Container } from "./styled";
 
 const Reviews = () => {
-  // style="width:560px;height:800px;overflow:hidden;position:relative;"
   return (
-    <div>
+    <Container>
       <h3 className="heading_3">
         Отзывы<span className="heading_3_circle">&bull;</span>
       </h3>
@@ -24,7 +23,7 @@ const Reviews = () => {
           </Box>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

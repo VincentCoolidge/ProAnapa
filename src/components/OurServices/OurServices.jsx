@@ -12,11 +12,12 @@ import {
   BoxArrowLink,
   More,
   SvgArrow,
+  Container,
 } from "./styled";
 
 const OurServices = () => {
   return (
-    <>
+    <Container>
       <h3 className="heading_3">
         Наши услуги<span className="heading_3_circle">&bull;</span>
       </h3>
@@ -49,7 +50,7 @@ const OurServices = () => {
           );
         })}
       </Grid>
-    </>
+    </Container>
   );
 };
 
