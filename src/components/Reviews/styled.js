@@ -1,9 +1,12 @@
 import styled from "styled-components";
-import { screenLt_360 } from "@globalStyle";
+import { screenLt_360, screenLt_480 } from "@globalStyle";
 
 export const Container = styled.div`
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding: 0 20px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -13,9 +16,12 @@ export const Box = styled.div`
   overflow: hidden;
   position: relative;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     width: 100%;
     height: 700px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 

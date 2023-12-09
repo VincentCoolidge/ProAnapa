@@ -59,6 +59,13 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+
+    ${screenLt_480} {
+      font-size: 40px;
+    }
+
+    ${screenLt_360} {
+    }
   }
   
   .heading_1_circle {
@@ -66,6 +73,14 @@ const GlobalStyle = createGlobalStyle`
     font-size: 35px;
     position: relative;
     top: 3px;
+
+    ${screenLt_480} {
+      font-size: 18px;
+      top: 2.2px;
+    }
+
+    ${screenLt_360} {
+    }
   }
   
   .heading_3 {
@@ -74,8 +89,11 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 800;
     line-height: normal;
 
-    ${screenLt_360} {
+    ${screenLt_480} {
       font-size: 30px;
+    }
+
+    ${screenLt_360} {
     }
   }
   
@@ -85,6 +103,11 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     top: 3px;
     left: 3px;
+
+    ${screenLt_480} {
+    top: 2.5px;
+    left: 1.5px;
+    }
   }
   
 `;

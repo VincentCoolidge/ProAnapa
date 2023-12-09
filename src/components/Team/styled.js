@@ -1,9 +1,12 @@
 import styled from "styled-components";
-import { screenLt_360 } from "@globalStyle";
+import { screenLt_360, screenLt_480 } from "@globalStyle";
 
 export const Section = styled.section`
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding: 0 20px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -14,10 +17,13 @@ export const Desc = styled.p`
   width: 1046px;
   padding: 25px 0 10px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     width: 100%;
     font-size: 14px;
     padding: 30px 0 10px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -26,10 +32,13 @@ export const Container = styled.div`
   gap: 42px;
   padding-top: 10px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding: 10px 0 20px;
     flex-direction: column;
     gap: 30px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -54,8 +63,11 @@ export const CEOTitle = styled.span`
   line-height: 120%;
   padding-bottom: 4px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding-bottom: 5px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -67,7 +79,10 @@ export const CEODesc = styled.span`
   line-height: 120%;
   padding-top: 4px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding-top: 0px;
+  }
+
+  ${screenLt_360} {
   }
 `;

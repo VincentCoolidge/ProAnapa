@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screenLt_360 } from "@globalStyle";
+import { screenLt_360, screenLt_480 } from "@globalStyle";
 
 import Services01 from "@assets/ourServices/services-01.jpg";
 import Services02 from "@assets/ourServices/services-02.jpg";
@@ -37,8 +37,11 @@ const handleImgType = (id) => {
 };
 
 export const Container = styled.div`
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding: 0 20px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -48,9 +51,12 @@ export const Grid = styled.div`
   flex-wrap: wrap;
   gap: 40px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding-top: 0px;
     gap: 20px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -59,10 +65,13 @@ export const BoxInfoFirst = styled.div`
   height: 546px;
   padding-top: 156px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding-top: 30px;
     height: 100%;
     width: 100%;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -99,9 +108,12 @@ export const Box = styled.div`
     background-image: url(${svgArrowHover});
   }
 
-  ${screenLt_360} {
-    height: 100%;
+  ${screenLt_480} {
+    height: 464px;
     width: 100%;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -110,11 +122,14 @@ export const BoxBackgroundImg = styled.div`
   height: 340px;
   ${({ id }) => handleImgType(id)};
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     background-size: cover;
     background-repeat: no-repeat;
     height: 230px;
     width: 100%;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -132,6 +147,14 @@ export const Title = styled.div`
   top: -30px;
   background: #fff;
   padding: 14px 0 15px;
+
+  ${screenLt_480} {
+    height: 40px;
+    padding: 10px 0 15px;
+  }
+
+  ${screenLt_360} {
+  }
 `;
 
 export const Desc = styled.div`
@@ -142,6 +165,13 @@ export const Desc = styled.div`
   padding: 0px 31px 0 30px;
   position: relative;
   top: -24px;
+
+  ${screenLt_480} {
+    padding: 0px 20px;
+  }
+
+  ${screenLt_360} {
+  }
 `;
 
 export const BoxArrowLink = styled.div`
@@ -151,6 +181,14 @@ export const BoxArrowLink = styled.div`
   position: absolute;
   right: 31px;
   gap: 10px;
+
+  ${screenLt_480} {
+    bottom: 20px;
+    right: 23px;
+  }
+
+  ${screenLt_360} {
+  }
 `;
 
 export const More = styled.span`

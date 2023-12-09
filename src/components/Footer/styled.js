@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { screenLt_360 } from "@globalStyle";
+import { screenLt_360, screenLt_480 } from "@globalStyle";
 
 export const FooterRoot = styled.footer`
   background-color: #18161a;
@@ -24,14 +24,20 @@ export const BoxInfo = styled.div`
     font-weight: 600;
     line-height: normal;
 
-    ${screenLt_360} {
+    ${screenLt_480} {
       font-size: 14px;
+    }
+
+    ${screenLt_360} {
     }
   }
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     gap: 30px;
     flex-direction: column;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -67,8 +73,11 @@ export const FormBox = styled.div`
   border-bottom: 1px solid #898883;
   padding: 50px 65px 40px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding: 35px 20px 40px;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
@@ -77,14 +86,20 @@ export const ContactsBox = styled.div`
   justify-content: space-between;
   padding: 40px 65px 35px;
 
-  ${screenLt_360} {
+  ${screenLt_480} {
     padding: 30px 20px;
     flex-direction: column;
+  }
+
+  ${screenLt_360} {
   }
 `;
 
 export const LogoBox = styled.div`
-  ${screenLt_360} {
+  ${screenLt_480} {
     margin-bottom: 20px;
+  }
+
+  ${screenLt_360} {
   }
 `;

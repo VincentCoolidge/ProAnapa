@@ -4,7 +4,10 @@
   justify-content: space-between;
   margin-top: 40px;
 
-  @media (max-width: 359px) {
+  @media (max-width: 479px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 359px) {
   }
 }
