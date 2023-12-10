@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { screenLt_360, screenLt_480 } from "@globalStyle";
+import {
+  screenLt_360,
+  screenLt_480,
+  screenLt_640,
+  screenLt_768,
+} from "@globalStyle";
 
 import Services01 from "@assets/ourServices/services-01.jpg";
 import Services02 from "@assets/ourServices/services-02.jpg";
@@ -37,11 +42,8 @@ const handleImgType = (id) => {
 };
 
 export const Container = styled.div`
-  ${screenLt_480} {
+  ${screenLt_768} {
     padding: 0 20px;
-  }
-
-  ${screenLt_360} {
   }
 `;
 
@@ -51,9 +53,18 @@ export const Grid = styled.div`
   flex-wrap: wrap;
   gap: 40px;
 
-  ${screenLt_480} {
+  ${screenLt_768} {
+    padding-top: 5px;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  ${screenLt_640} {
     padding-top: 0px;
     gap: 20px;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {
@@ -65,10 +76,19 @@ export const BoxInfoFirst = styled.div`
   height: 546px;
   padding-top: 156px;
 
-  ${screenLt_480} {
+  ${screenLt_768} {
+    padding-top: 40px;
+    height: 100%;
+    width: 50%;
+  }
+
+  ${screenLt_640} {
     padding-top: 30px;
     height: 100%;
     width: 100%;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {
@@ -80,10 +100,28 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+
+  ${screenLt_768} {
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  ${screenLt_640} {
+    font-size: 16px;
+    line-height: 140%;
+  }
 `;
 
 export const Pre = styled.div`
   height: 22.4px;
+
+  ${screenLt_768} {
+    height: 20px;
+  }
+
+  ${screenLt_640} {
+    height: 22.4px;
+  }
 `;
 
 export const SvgArrow = styled.div`
@@ -108,9 +146,17 @@ export const Box = styled.div`
     background-image: url(${svgArrowHover});
   }
 
-  ${screenLt_480} {
+  ${screenLt_768} {
+    height: 464px;
+    width: 47%;
+  }
+
+  ${screenLt_640} {
     height: 464px;
     width: 100%;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {
@@ -122,11 +168,21 @@ export const BoxBackgroundImg = styled.div`
   height: 340px;
   ${({ id }) => handleImgType(id)};
 
-  ${screenLt_480} {
+  ${screenLt_768} {
     background-size: cover;
     background-repeat: no-repeat;
     height: 230px;
     width: 100%;
+  }
+
+  ${screenLt_640} {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 230px;
+    width: 100%;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {
@@ -148,9 +204,12 @@ export const Title = styled.div`
   background: #fff;
   padding: 14px 0 15px;
 
-  ${screenLt_480} {
+  ${screenLt_640} {
     height: 40px;
     padding: 10px 0 15px;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {
@@ -166,8 +225,11 @@ export const Desc = styled.div`
   position: relative;
   top: -24px;
 
-  ${screenLt_480} {
+  ${screenLt_640} {
     padding: 0px 20px;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {
@@ -182,9 +244,12 @@ export const BoxArrowLink = styled.div`
   right: 31px;
   gap: 10px;
 
-  ${screenLt_480} {
+  ${screenLt_640} {
     bottom: 20px;
     right: 23px;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {

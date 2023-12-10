@@ -1,7 +1,4 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
-/* eslint-disable jsx-a11y/iframe-has-title */
-/* eslint-disable react/style-prop-object */
-import { Box, Iframe, Link, Container } from "./styled";
+import { Box, Iframe, Link, Container, Block } from "./styled";
 
 const Reviews = () => {
   return (
@@ -9,7 +6,7 @@ const Reviews = () => {
       <h3 className="heading_3">
         Отзывы<span className="heading_3_circle">&bull;</span>
       </h3>
-      <div>
+      <Block>
         <div>
           <Box>
             <Iframe src="https://yandex.ru/maps-reviews-widget/214260051573?comments" />
@@ -22,7 +19,7 @@ const Reviews = () => {
             </Link>
           </Box>
         </div>
-      </div>
+      </Block>
     </Container>
   );
 };

@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-import { screenLt_360, screenLt_480 } from "@globalStyle";
+import {
+  screenLt_360,
+  screenLt_480,
+  screenLt_640,
+  screenLt_768,
+} from "@globalStyle";
 
 export const Section = styled.div`
-  ${screenLt_480} {
+  ${screenLt_768} {
     padding: 0 20px;
-  }
-
-  ${screenLt_360} {
   }
 `;
 
@@ -17,10 +19,17 @@ export const Box = styled.div`
   gap: 42px;
   justify-content: space-around;
 
-  ${screenLt_480} {
-    padding-top: 30px;
+  ${screenLt_768} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  ${screenLt_640} {
     flex-direction: column;
-    gap: 30px;
+  }
+
+  ${screenLt_480} {
   }
 
   ${screenLt_360} {
@@ -31,9 +40,18 @@ export const Video = styled.iframe`
   height: 455px;
   width: 502px;
 
-  ${screenLt_480} {
+  ${screenLt_768} {
+    width: 45%;
+    height: 230px;
+  }
+
+  ${screenLt_640} {
     width: 100%;
-    height: 305px;
+    height: 355px;
+  }
+
+  ${screenLt_480} {
+    height: 275px;
   }
 
   ${screenLt_360} {

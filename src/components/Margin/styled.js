@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-import { screenLt_360, screenLt_480, screenLt_1650 } from "@globalStyle";
+import {
+  screenLt_640,
+  screenLt_768,
+  screenLt_1650
+} from "@globalStyle";
 
 export const Pre = styled.div`
   height: 160px;
@@ -9,10 +13,11 @@ export const Pre = styled.div`
     height: 110px;
   }
 
-  ${screenLt_480} {
-    height: 80px;
+  ${screenLt_768} {
+    height: 60px;
   }
 
-  ${screenLt_360} {
+  ${screenLt_640} {
+    height: 80px;
   }
 `;
