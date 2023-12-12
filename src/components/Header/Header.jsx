@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "@components/Logo";
 import BurgerSvg from "@assets/header/burger.svg";
 import PhoneSvg from "@assets/header/phone.svg";
 import CloseSvg from "@assets/header/close.svg";
+import SocialLinks from "@components/SocialLinks";
 
 import {
   LaptopScreenNavigation,
@@ -22,10 +23,21 @@ import {
   BurgerHeader,
   BurgerList,
   BurgerFooter,
+  BoxSocialLinks,
 } from "./styled";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const rootElement = document.querySelector("body");
+
+    if (isOpen) {
+      rootElement.style.overflow = "hidden";
+    } else {
+      rootElement.style.overflow = "";
+    }
+  }, [isOpen]);
 
   return (
     <>
@@ -67,9 +79,12 @@ const Header = () => {
             </BurgerList>
             <BurgerFooter>
               <Logo isBurgerMenu={true} />
-              <ElementPhoneLink href="tel:+79189333163">
+              <ElementPhoneLink isBurgerMenu={true} href="tel:+79189333163">
                 +7 918 933 31 63
               </ElementPhoneLink>
+              <BoxSocialLinks>
+                <SocialLinks color={"black"} />
+              </BoxSocialLinks>
             </BurgerFooter>
           </ContainerBurger>
         </BurgerMenu>

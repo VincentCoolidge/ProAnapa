@@ -31,7 +31,7 @@ export const Circle = styled.div`
   ${screenLt_1366} {
     height: 4px;
     width: 4px;
-    bottom: 5px;
-    right: -6px;
+    bottom: 6.5px;
+    right: -5.5px;
   }
 `;

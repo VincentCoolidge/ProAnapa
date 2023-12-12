@@ -5,11 +5,18 @@ import {
   screenLt_1587,
   screenLt_1366,
   screenLt_1024,
+  screenLt_768,
 } from "@globalStyle";
 
 export const Container = styled.header`
   background-color: #18161a;
   height: 76px;
+
+  ${screenLt_768} {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
 `;
 
 export const Navigation = styled.nav`
@@ -104,9 +111,14 @@ export const ElementPhoneLink = styled.a`
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  ${({ isBurgerMenu }) =>
+    isBurgerMenu ? "color: #18161A;" : "color: #fffdf9;"}
 
   ${screenLt_1366} {
     font-size: 13px;
+
+    ${({ isBurgerMenu }) =>
+      isBurgerMenu && `font-size: 16px; font-weight: 700;`}
   }
 `;
 
@@ -151,4 +163,12 @@ export const BurgerList = styled.ul`
   flex-direction: column;
 `;
 
-export const BurgerFooter = styled.div``;
+export const BurgerFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+`;
+
+export const BoxSocialLinks = styled.div`
+  margin-top: 4px;
+`;
