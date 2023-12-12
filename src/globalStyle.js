@@ -44,6 +44,8 @@ export const screenLt_360 = `@media
 const GlobalStyle = createGlobalStyle`
 * {
     font-family: Nunito Sans;
+    // delete
+    overflow: hidden;
 }
 
   .app {

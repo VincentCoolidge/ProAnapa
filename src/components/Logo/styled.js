@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-import { screenLt_1366, screenLt_1024 } from "@globalStyle";
+import { screenLt_1366 } from "@globalStyle";
 
 export const Container = styled.div``;
 
 export const Link = styled.a`
-  color: #fffdf9;
+  ${({ isBurgerMenu }) =>
+    isBurgerMenu ? `color: #18161A;` : `color: #fffdf9;`}
   font-family: Nunito Sans;
   font-size: 24px;
   font-style: normal;

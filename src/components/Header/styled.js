@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-import { screenLt_1650, screenLt_1587, screenLt_1366 } from "@globalStyle";
+import {
+  screenLt_1650,
+  screenLt_1587,
+  screenLt_1366,
+  screenLt_1024,
+} from "@globalStyle";
 
 export const Container = styled.header`
   background-color: #18161a;
@@ -8,9 +13,6 @@ export const Container = styled.header`
 `;
 
 export const Navigation = styled.nav`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
   height: 100%;
   max-width: 1587px;
   margin: 0 auto;
@@ -23,6 +25,28 @@ export const Navigation = styled.nav`
 
   ${screenLt_1587} {
     padding: 0 20px;
+  }
+`;
+
+export const LaptopScreenNavigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  ${screenLt_1024} {
+    display: none;
+  }
+`;
+
+export const MobileScreenNavigation = styled.div`
+  display: none;
+
+  ${screenLt_1024} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
   }
 `;
 
@@ -42,7 +66,16 @@ export const List = styled.ul`
   }
 `;
 
-export const Element = styled.li``;
+export const Element = styled.li`
+  ${screenLt_1024} {
+    > a {
+      color: #18161a;
+      font-size: 18px;
+      font-weight: 600;
+      text-shadow: none;
+    }
+  }
+`;
 
 export const Link = styled.a`
   color: #fffdf9;
@@ -76,3 +109,46 @@ export const ElementPhoneLink = styled.a`
     font-size: 13px;
   }
 `;
+
+export const LogoMobileBox = styled.div`
+  text-align: center;
+`;
+
+export const Burger = styled.img`
+  cursor: pointer;
+`;
+
+export const Phone = styled.img`
+  cursor: pointer;
+`;
+
+export const BurgerMenu = styled.div`
+  background-color: #fff;
+  z-index: 1000;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+`;
+
+export const ContainerBurger = styled.div`
+  padding: 20px 20px 25px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const BurgerHeader = styled.div`
+  height: 50px;
+  display: flex;
+  justify-content: end;
+`;
+
+export const BurgerList = styled.ul`
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const BurgerFooter = styled.div``;

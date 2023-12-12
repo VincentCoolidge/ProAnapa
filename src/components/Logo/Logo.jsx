@@ -1,8 +1,8 @@
 import { Container, Link, Circle } from "./styled";
 
-const Logo = () => (
+const Logo = ({ isBurgerMenu = false }) => (
   <Container>
-    <Link href="/#">
+    <Link href="/#" isBurgerMenu={isBurgerMenu}>
       ProAnapa
       <Circle className="logo_link_circle" />
     </Link>
