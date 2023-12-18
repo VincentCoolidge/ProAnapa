@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import background from "@assets/animationInfo_bg.png";
 
-import { screenLt_360, screenLt_480, screenLt_640 } from "@globalStyle";
+import {
+  screenLt_360,
+  screenLt_480,
+  screenLt_640,
+  screenLt_768,
+  screenLt_1024,
+} from "@globalStyle";
 
 export const Container = styled.div`
   height: 824px;
@@ -9,14 +15,12 @@ export const Container = styled.div`
   position: relative;
   z-index: 10;
 
+  ${screenLt_768} {
+    height: 700px;
+  }
+
   ${screenLt_640} {
     height: 100vh;
-  }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
   }
 
   &:before {
@@ -33,17 +37,15 @@ export const Container = styled.div`
     -o-transition: width 1s ease-out;
     transition: width 1s ease-out;
 
-    ${screenLt_640} {
-      height: 100vh;
+    ${screenLt_1024} {
       width: 100%;
       animation-play-state: paused;
       background-position: center;
     }
 
-    ${screenLt_480} {
-    }
-
-    ${screenLt_360} {
+    ${screenLt_768} {
+      height: 700px;
+      width: 100%;
     }
   }
 
@@ -63,6 +65,16 @@ export const Box = styled.div`
   width: 47%;
   top: 169px;
   right: 150px;
+
+  ${screenLt_1024} {
+    width: 90%;
+    right: 58px;
+  }
+
+  ${screenLt_768} {
+    width: 65%;
+    right: 243px;
+  }
 
   ${screenLt_640} {
     width: 100%;
@@ -85,25 +97,19 @@ export const BoxHeading1 = styled.div`
   ${screenLt_640} {
     padding-left: 20px;
   }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
-  }
 `;
 
-export const Heading1 = styled.h1`
-  ${screenLt_360} {
-  }
-`;
+export const Heading1 = styled.h1``;
 
 export const Heading3 = styled.h3`
-  ${screenLt_640} {
+  ${screenLt_768} {
     font-size: 20px;
-    width: 80%;
     font-weight: 700;
     line-height: 120%;
+  }
+
+  ${screenLt_640} {
+    width: 80%;
     padding-top: 10px;
     padding-left: 20px;
   }
@@ -133,9 +139,6 @@ export const Desc = styled.span`
     margin: 10px 0 0;
   }
 
-  ${screenLt_480} {
-  }
-
   ${screenLt_360} {
     width: 100%;
   }
@@ -146,14 +149,8 @@ export const BoxSocialLinks = styled.div`
   right: 23px;
   bottom: 12px;
 
-  ${screenLt_640} {
+  ${screenLt_1024} {
     display: none;
-  }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
   }
 `;
 
@@ -164,11 +161,5 @@ export const BoxButton = styled.div`
   ${screenLt_640} {
     margin-top: 25px;
     padding-left: 20px;
-  }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
   }
 `;

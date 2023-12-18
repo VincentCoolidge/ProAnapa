@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { screenLt_640, screenLt_768 } from "@globalStyle";
+import { screenLt_640, screenLt_768, screenLt_1024 } from "@globalStyle";
 
 export const Section = styled.section`
-  ${screenLt_768} {
+  ${screenLt_1024} {
     padding: 0 20px;
   }
 `;
@@ -14,7 +14,7 @@ export const Desc = styled.p`
   width: 1046px;
   padding: 25px 0 10px;
 
-  ${screenLt_768} {
+  ${screenLt_1024} {
     width: 100%;
     font-size: 15px;
     padding: 10px 0 10px;

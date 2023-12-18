@@ -4,6 +4,7 @@ import {
   screenLt_480,
   screenLt_640,
   screenLt_768,
+  screenLt_1024,
 } from "@globalStyle";
 
 import Services01 from "@assets/ourServices/services-01.jpg";
@@ -42,7 +43,7 @@ const handleImgType = (id) => {
 };
 
 export const Container = styled.div`
-  ${screenLt_768} {
+  ${screenLt_1024} {
     padding: 0 20px;
   }
 `;
@@ -63,18 +64,18 @@ export const Grid = styled.div`
     padding-top: 0px;
     gap: 20px;
   }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
-  }
 `;
 
 export const BoxInfoFirst = styled.div`
   width: 503px;
   height: 546px;
   padding-top: 156px;
+
+  ${screenLt_1024} {
+    padding-top: 40px;
+    height: 100%;
+    width: 47%;
+  }
 
   ${screenLt_768} {
     padding-top: 40px;
@@ -128,6 +129,10 @@ export const SvgArrow = styled.div`
   background-image: url(${svgArrow});
   width: 35px;
   height: 35px;
+
+  ${screenLt_1024} {
+    transform: scale(0.9);
+  }
 `;
 
 export const Box = styled.div`
@@ -146,9 +151,13 @@ export const Box = styled.div`
     background-image: url(${svgArrowHover});
   }
 
+  ${screenLt_1024} {
+    height: 520px;
+    width: 47%;
+  }
+
   ${screenLt_768} {
     height: 464px;
-    width: 47%;
   }
 
   ${screenLt_640} {
@@ -208,12 +217,6 @@ export const Title = styled.div`
     height: 40px;
     padding: 10px 0 15px;
   }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
-  }
 `;
 
 export const Desc = styled.div`
@@ -225,14 +228,13 @@ export const Desc = styled.div`
   position: relative;
   top: -24px;
 
-  ${screenLt_640} {
+  ${screenLt_1024} {
+    top: -34px;
     padding: 0px 20px;
   }
 
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
+  ${screenLt_640} {
+    top: -24px;
   }
 `;
 
@@ -244,15 +246,15 @@ export const BoxArrowLink = styled.div`
   right: 31px;
   gap: 10px;
 
+  ${screenLt_1024} {
+    bottom: 10px;
+    right: 10px;
+    gap: 5px;
+  }
+
   ${screenLt_640} {
     bottom: 20px;
     right: 23px;
-  }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
   }
 `;
 

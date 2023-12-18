@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { screenLt_640, screenLt_768 } from "@globalStyle";
+import { screenLt_640, screenLt_768, screenLt_1024 } from "@globalStyle";
 
 import Arrow from "@assets/arrow.svg";
 import ArrowHover from "@assets/arrowHover.svg";
@@ -45,7 +45,7 @@ const handleImgPhoto = (index) => {
 };
 
 export const Container = styled.div`
-  ${screenLt_768} {
+  ${screenLt_1024} {
     padding: 0 20px;
   }
 `;
@@ -81,6 +81,11 @@ export const ElementSliderPlan = styled.div`
   background-repeat: no-repeat;
   ${({ index }) => handleImgPlan(index)};
 
+  ${screenLt_1024} {
+    height: 700px;
+    width: 100%;
+  }
+
   ${screenLt_768} {
     height: 300px;
     width: 300px;
@@ -88,7 +93,6 @@ export const ElementSliderPlan = styled.div`
 
   ${screenLt_640} {
     height: 407px;
-    width: 300px;
   }
 `;
 
@@ -100,6 +104,11 @@ export const ElementSliderPhoto = styled.div`
   background-repeat: no-repeat;
   ${({ index }) => handleImgPhoto(index)};
 
+  ${screenLt_1024} {
+    height: 700px;
+    width: 100%;
+  }
+
   ${screenLt_768} {
     height: 300px;
     width: 100%;
@@ -107,6 +116,5 @@ export const ElementSliderPhoto = styled.div`
 
   ${screenLt_640} {
     height: 215px;
-    width: 100%;
   }
 `;

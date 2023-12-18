@@ -1,13 +1,8 @@
 import styled from "styled-components";
-import {
-  screenLt_360,
-  screenLt_480,
-  screenLt_640,
-  screenLt_768,
-} from "@globalStyle";
+import { screenLt_640, screenLt_768, screenLt_1024 } from "@globalStyle";
 
 export const Container = styled.div`
-  ${screenLt_768} {
+  ${screenLt_1024} {
     padding: 0 20px;
   }
 `;
@@ -17,6 +12,13 @@ export const Box = styled.div`
   height: 800px;
   overflow: hidden;
   position: relative;
+
+  ${screenLt_1024} {
+    margin: 0 auto;
+    height: 600px;
+    width: 100%;
+    display: flex;
+  }
 
   ${screenLt_768} {
     margin: 0 auto;
@@ -29,12 +31,6 @@ export const Box = styled.div`
     width: 100%;
     height: 700px;
   }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
-  }
 `;
 
 export const Iframe = styled.iframe`
@@ -43,7 +39,7 @@ export const Iframe = styled.iframe`
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
 
-  ${screenLt_768} {
+  ${screenLt_1024} {
     width: 500px;
     margin: 0 auto;
   }
