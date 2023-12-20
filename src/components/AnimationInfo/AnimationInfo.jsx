@@ -1,4 +1,6 @@
 import SocialLinks from "@components/SocialLinks";
+import ModalForm from "@components/ModalForm";
+import useModals from "@hooks/useModals";
 
 import {
   Container,
@@ -13,29 +15,38 @@ import {
 
 import Button from "@components/Button";
 
-const AnimationInfo = () => (
-  <Container>
-    <Box>
-      <BoxHeading1>
-        <Heading1 className="heading_1">
-          ProAnapa<span className="heading_1_circle">&bull;</span>
-        </Heading1>
-      </BoxHeading1>
-      <Heading3 className="heading_3">
-        Ваш надежный эксперт и партнер на рынке недвижимости
-      </Heading3>
-      <Desc>
-        Помогаем инвестировать, продать, обеспечиваем комплексную подготовку и
-        управление арендными объектами
-      </Desc>
-      <BoxButton>
-        <Button title={"Начать инвестировать"} />
-      </BoxButton>
-    </Box>
-    <BoxSocialLinks>
-      <SocialLinks color={"black"} />
-    </BoxSocialLinks>
-  </Container>
-);
+const AnimationInfo = () => {
+  const { openModal } = useModals();
+
+  return (
+    <Container>
+      <Box>
+        <BoxHeading1>
+          <Heading1 className="heading_1">
+            ProAnapa<span className="heading_1_circle">&bull;</span>
+          </Heading1>
+        </BoxHeading1>
+        <Heading3 className="heading_3">
+          Ваш надежный эксперт и партнер на рынке недвижимости
+        </Heading3>
+        <Desc>
+          Помогаем инвестировать, продать, обеспечиваем комплексную подготовку и
+          управление арендными объектами
+        </Desc>
+        <BoxButton>
+          <Button
+            title={"Начать инвестировать"}
+            onClick={() => {
+              openModal(<ModalForm />);
+            }}
+          />
+        </BoxButton>
+      </Box>
+      <BoxSocialLinks>
+        <SocialLinks color={"black"} />
+      </BoxSocialLinks>
+    </Container>
+  );
+};
 
 export default AnimationInfo;
