@@ -1,8 +1,13 @@
 import styled from "styled-components";
-import { screenLt_640, screenLt_768, screenLt_1024 } from "@globalStyle";
+import {
+  screenLt_640,
+  screenLt_768,
+  screenLt_1024,
+  screenLt_1366,
+} from "@globalStyle";
 
 export const Container = styled.div`
-  ${screenLt_1024} {
+  ${screenLt_1366} {
     padding: 0 20px;
   }
 `;
@@ -13,15 +18,12 @@ export const Box = styled.div`
   overflow: hidden;
   position: relative;
 
-  ${screenLt_1024} {
+  ${screenLt_1366} {
     margin: 0 auto;
-    height: 600px;
-    width: 100%;
-    display: flex;
+    height: 900px;
   }
 
-  ${screenLt_768} {
-    margin: 0 auto;
+  ${screenLt_1024} {
     height: 600px;
     width: 100%;
     display: flex;

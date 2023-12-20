@@ -6,10 +6,11 @@ import {
   screenLt_768,
   screenLt_1024,
   screenLt_1366,
+  screenLt_1650,
 } from "@globalStyle";
 
 export const Section = styled.div`
-  ${screenLt_1366} {
+  ${screenLt_1650} {
     padding: 0 20px;
   }
 `;

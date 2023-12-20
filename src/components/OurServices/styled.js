@@ -5,6 +5,8 @@ import {
   screenLt_640,
   screenLt_768,
   screenLt_1024,
+  screenLt_1366,
+  screenLt_1650,
 } from "@globalStyle";
 
 import Services01 from "@assets/ourServices/services-01.jpg";
@@ -43,7 +45,7 @@ const handleImgType = (id) => {
 };
 
 export const Container = styled.div`
-  ${screenLt_1024} {
+  ${screenLt_1650} {
     padding: 0 20px;
   }
 `;
@@ -53,6 +55,11 @@ export const Grid = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+
+  ${screenLt_1650} {
+    justify-content: space-between;
+    gap: 30px;
+  }
 
   ${screenLt_768} {
     padding-top: 5px;
@@ -71,10 +78,17 @@ export const BoxInfoFirst = styled.div`
   height: 546px;
   padding-top: 156px;
 
+  ${screenLt_1650} {
+    width: 31%;
+  }
+
+  ${screenLt_1366} {
+    width: 47%;
+  }
+
   ${screenLt_1024} {
     padding-top: 40px;
     height: 100%;
-    width: 47%;
   }
 
   ${screenLt_768} {
@@ -151,9 +165,16 @@ export const Box = styled.div`
     background-image: url(${svgArrowHover});
   }
 
+  ${screenLt_1650} {
+    width: 31%;
+  }
+
+  ${screenLt_1366} {
+    width: 47%;
+  }
+
   ${screenLt_1024} {
     height: 520px;
-    width: 47%;
   }
 
   ${screenLt_768} {
@@ -177,9 +198,12 @@ export const BoxBackgroundImg = styled.div`
   height: 340px;
   ${({ id }) => handleImgType(id)};
 
-  ${screenLt_768} {
+  ${screenLt_1366} {
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  ${screenLt_768} {
     height: 230px;
     width: 100%;
   }
@@ -189,12 +213,6 @@ export const BoxBackgroundImg = styled.div`
     background-repeat: no-repeat;
     height: 230px;
     width: 100%;
-  }
-
-  ${screenLt_480} {
-  }
-
-  ${screenLt_360} {
   }
 `;
 

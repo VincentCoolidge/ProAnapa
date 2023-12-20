@@ -23,6 +23,7 @@ const Footer = () => (
           Узнайте, какой доход может
           <br /> приносить ваша недвижимость
         </h3>
+        <div></div>
       </FormBox>
       <ContactsBox>
         <LogoBox>
