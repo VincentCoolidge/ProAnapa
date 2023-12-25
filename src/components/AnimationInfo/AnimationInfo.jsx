@@ -16,10 +16,13 @@ import {
 
 import Button from "@components/Button";
 
+
 const AnimationInfo = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  
+  // const test = async function () {
+  //   sendEmail();
+  // };
 
   return (
     <>

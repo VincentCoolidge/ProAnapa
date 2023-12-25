@@ -23,6 +23,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "@components/Button";
 
+import { sendEmail } from "../../mail/transport";
+
 const schema = yup.object().shape({
   name: yup.string().required("Имя обязательно"),
   phone: yup.string().required("Телефон обязателен"),
@@ -55,9 +57,8 @@ const Modal = ({ isOpen = false, setIsOpen = () => {} }) => {
     return null;
   }
 
-  const onSubmit = (data) => {
-    // Отправка формы
-    console.log(data);
+  const onSubmit = async (data) => {
+    sendEmail();
   };
 
   return createPortal(
