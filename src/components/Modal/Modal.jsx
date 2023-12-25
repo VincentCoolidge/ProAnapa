@@ -1,61 +1,119 @@
-import { Shadow } from "./styled";
+import {
+  Overlay,
+  Container,
+  Form,
+  Heading,
+  Description,
+  Input,
+  BoxEmail,
+  BoxName,
+  BoxPhone,
+  InputPhone,
+  PrivacyPolicy,
+  Link,
+  Close,
+} from "./styled";
+
+import CloseSvg from "@assets/header/close.svg";
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { useRef, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Form from "@components/Form";
 
-import useModals from "@hooks/useModals";
-import useOnClickOutside from "@hooks/useOnClickOutside";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import Button from "@components/Button";
 
-const Modal = () => {
-  const [opened, setOpened] = useState(true);
-  const navigate = useNavigate();
-  const modalRoot = document.getElementById("modal-root");
-  const bodyElRef = useRef(null);
+const schema = yup.object().shape({
+  name: yup.string().required("Имя обязательно"),
+  phone: yup.string().required("Телефон обязателен"),
+  email: yup
+    .string()
+    .email("Неверный формат email")
+    .required("Email обязателен"),
+});
 
-  console.log("here");
-
-  const { closeModal } = useModals();
-
-  const handleSetOpened = (newState) => {
-    setOpened(newState);
-    newState === false && closeModal();
-  };
-
-  const closeOnEscKeyown = (event) => {
-    if (event.key === "Escape") {
-      handleSetOpened(false);
-    }
-  };
+const Modal = ({ isOpen = false, setIsOpen = () => {} }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
   useEffect(() => {
-    const bodyWidth = document.body.clientWidth;
+    const rootElement = document.querySelector("body");
 
-    if (opened) {
-      document.body.style.overflowY = "hidden";
-      document.body.style.width = bodyWidth + "px";
+    if (isOpen) {
+      rootElement.style.overflow = "hidden";
     } else {
-      document.body.style.width = "auto";
-      document.body.style.overflowY = "unset";
+      rootElement.style.overflow = "";
     }
+  }, [isOpen]);
 
-    return () => {
-      document.body.style.width = "auto";
+  if (!isOpen) {
+    return null;
+  }
 
-      document.body.style.overflowY = "unset";
-    };
-  }, [opened, navigate]);
-
-  useOnClickOutside(bodyElRef, () => handleSetOpened(false));
-
-  if (!modalRoot || !opened) return null;
+  const onSubmit = (data) => {
+    // Отправка формы
+    console.log(data);
+  };
 
   return createPortal(
-    <Shadow>
-      <div ref={bodyElRef}>
-      </div>
-    </Shadow>,
-    modalRoot
+    <Overlay>
+      <Container>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <div style={{ position: "relative" }}>
+            <Heading>Связаться с нами</Heading>
+            <Close
+              alt="Close"
+              src={CloseSvg}
+              onClick={() => setIsOpen((prevState) => !prevState)}
+            />
+          </div>
+          <Description>
+            Оставьте свой номер телефона и наш менеджер с вами свяжется
+          </Description>
+          <BoxName>
+            <Input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Ваше имя"
+              isError={errors?.name?.message}
+              {...register("name", { required: true })}
+            />
+          </BoxName>
+          <BoxPhone>
+            <InputPhone
+              mask="+7 (999) 999-99-99"
+              placeholder="+7 (___) ___-__-__"
+              maskChar="_"
+              alwaysShowMask={false}
+              isError={errors?.phone?.message}
+              {...register("phone", { required: true })}
+            />
+          </BoxPhone>
+          <BoxEmail>
+            <Input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+              isError={errors?.email?.message}
+              {...register("email", { required: true })}
+            />
+          </BoxEmail>
+          <PrivacyPolicy>
+            Нажимая кнопку вы соглашаетесь с{" "}
+            <Link>политикой конфиденциальности</Link>
+          </PrivacyPolicy>
+          <Button title="Отправить" type="submit" />
+        </Form>
+      </Container>
+    </Overlay>,
+    document.getElementById("modal")
   );
 };
 
