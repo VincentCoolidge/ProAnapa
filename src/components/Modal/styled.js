@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { screenLt_768 } from "@globalStyle";
+import { screenLt_768, screenLt_640, screenLt_480 } from "@globalStyle";
 
 import InputMask from "react-input-mask";
 
@@ -26,6 +26,10 @@ export const Container = styled.div`
   ${screenLt_768} {
     max-width: 100%;
     margin: 0 10px;
+  }
+
+  ${screenLt_640} {
+    padding: 15px 30px 25px;
   }
 `;
 
@@ -147,4 +151,13 @@ export const Close = styled.img`
   position: absolute;
   right: -30px;
   top: -15px;
+
+  ${screenLt_640} {
+    right: -10px;
+    top: 0px;
+  }
+
+  ${screenLt_480} {
+    transform: scale(0.7);
+  }
 `;
