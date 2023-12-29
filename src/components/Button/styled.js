@@ -10,4 +10,5 @@ export const Button = styled.button`
   font-weight: 600;
   line-height: normal;
   text-align: center;
+  color: ${(props) => props.color};
 `;

@@ -1,5 +1,6 @@
 import Logo from "@components/Logo";
 import SocialLinks from "@components/SocialLinks";
+import Form from "@components/Form";
 
 import {
   Container,
@@ -23,7 +24,7 @@ const Footer = () => (
           Узнайте, какой доход может
           <br /> приносить ваша недвижимость
         </h3>
-        <div></div>
+        <Form />
       </FormBox>
       <ContactsBox>
         <LogoBox>

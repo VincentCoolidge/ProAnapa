@@ -20,8 +20,8 @@ const App = () => (
       <Furnishing />
       <Margin />
       <Team />
-      <Margin />
-      <Reviews />
+      {/* <Margin />
+      <Reviews /> */}
       <Margin />
       <YouTubeInfo />
       <Margin />

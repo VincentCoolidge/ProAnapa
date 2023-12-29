@@ -39,6 +39,10 @@ export const Heading = styled.h3`
   color: #18161a;
   font-size: 40px;
   font-weight: 600;
+
+  ${screenLt_640} {
+    font-size: 30px;
+  }
 `;
 
 export const Description = styled.span`
@@ -154,10 +158,11 @@ export const Close = styled.img`
 
   ${screenLt_640} {
     right: -10px;
+    transform: scale(0.7);
     top: 0px;
   }
 
   ${screenLt_480} {
-    transform: scale(0.7);
+    // transform: scale(0.7);
   }
 `;
