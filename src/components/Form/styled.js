@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  screenLt_1587,
-  screenLt_1366,
-  screenLt_1024,
-  screenLt_768,
-  screenLt_640,
-} from "@globalStyle";
+import { screenLt_1587, screenLt_1366, screenLt_1024 } from "@globalStyle";
 
 import InputMask from "react-input-mask";
 
@@ -13,6 +7,11 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
+
+  ${(props) =>
+    props.isLoading &&
+    `pointer-events: none;  
+   `};
 
   ${screenLt_1366} {
     flex-direction: column;

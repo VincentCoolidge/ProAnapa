@@ -1,14 +1,21 @@
 import React from "react";
-import { Button } from "./styled";
+import { Button, LoaderContainer, Loader } from "./styled";
 
 const ButtonComponent = ({
   title = "",
   type = "button",
   color = "inherit",
+  isLoading = false,
   onClick,
 }) => (
-  <Button type={type} color={color} onClick={onClick}>
-    {title}
+  <Button type={type} color={color} onClick={onClick} isLoading={isLoading}>
+    {!isLoading ? (
+      title
+    ) : (
+      <LoaderContainer>
+        <Loader />
+      </LoaderContainer>
+    )}
   </Button>
 );
 

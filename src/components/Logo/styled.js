@@ -5,8 +5,8 @@ import { screenLt_1366 } from "@globalStyle";
 export const Container = styled.div``;
 
 export const Link = styled.a`
-  ${({ isBurgerMenu }) =>
-    isBurgerMenu ? `color: #18161A;` : `color: #fffdf9;`}
+  ${({ data_is_burger_menu }) =>
+    data_is_burger_menu === "true" ? `color: #18161A;` : `color: #fffdf9;`}
   font-family: Nunito Sans;
   font-size: 24px;
   font-style: normal;

@@ -15,13 +15,18 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-  background: #fff;
+  background-color: #fff;
   height: 100%;
   margin: 0 auto;
   max-height: 530px;
   max-width: 687px;
   width: 100%;
   padding: 50px 60px 45px;
+
+  ${(props) =>
+    props.isLoading &&
+    `pointer-events: none;  
+   `};
 
   ${screenLt_768} {
     max-width: 100%;

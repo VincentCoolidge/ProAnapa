@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Overlay,
   Container,
@@ -18,21 +20,16 @@ import CloseSvg from "@assets/header/close.svg";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
+import { sendEmailjs } from "@utils/emailjs";
+
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import Button from "@components/Button";
-
-const schema = yup.object().shape({
-  name: yup.string().required("Имя обязательно"),
-  phone: yup.string().required("Телефон обязателен"),
-  email: yup
-    .string()
-    .email("Неверный формат email")
-    .required("Email обязателен"),
-});
+import { schema } from "@utils/schema";
 
 const Modal = ({ isOpen = false, setIsOpen = () => {} }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -55,13 +52,12 @@ const Modal = ({ isOpen = false, setIsOpen = () => {} }) => {
     return null;
   }
 
-  const onSubmit = async (data) => {
-    // sendEmail();
-  };
+  const onSubmit = ({ email, phone, name }) =>
+    sendEmailjs({ email, phone, name }, setIsLoading);
 
   return createPortal(
     <Overlay>
-      <Container>
+      <Container isLoading={isLoading}>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <div style={{ position: "relative" }}>
             <Heading>Связаться с нами</Heading>
@@ -108,7 +104,7 @@ const Modal = ({ isOpen = false, setIsOpen = () => {} }) => {
             Нажимая кнопку вы соглашаетесь с{" "}
             <Link>политикой конфиденциальности</Link>
           </PrivacyPolicy>
-          <Button title="Отправить" type="submit" />
+          <Button title="Отправить" type="submit" isLoading={isLoading} />
         </Form>
       </Container>
     </Overlay>,

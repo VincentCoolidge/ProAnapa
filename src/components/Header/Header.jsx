@@ -78,8 +78,11 @@ const Header = () => {
               </Element>
             </BurgerList>
             <BurgerFooter>
-              <Logo isBurgerMenu={true} />
-              <ElementPhoneLink isBurgerMenu={true} href="tel:+79189333163">
+              <Logo data_is_burger_menu={"true"} />
+              <ElementPhoneLink
+                data_is_burger_menu={"true"}
+                href="tel:+79189333163"
+              >
                 +7 918 933 31 63
               </ElementPhoneLink>
               <BoxSocialLinks>
@@ -137,7 +140,9 @@ const Header = () => {
                 +7 918 933 31 63
               </ElementPhoneLink>
             </LogoMobileBox>
-            <Phone alt="Phone" src={PhoneSvg} />
+            <a href="tel:+79189333163">
+              <Phone alt="Phone" src={PhoneSvg} />
+            </a>
           </MobileScreenNavigation>
         </Navigation>
       </Container>

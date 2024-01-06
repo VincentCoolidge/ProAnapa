@@ -1,7 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+
+import { schema } from "@utils/schema";
+import { sendEmailjs } from "@utils/emailjs";
 
 import Button from "@components/Button";
 
@@ -17,16 +19,9 @@ import {
   DescriptionVisible,
 } from "./styled";
 
-const schema = yup.object().shape({
-  name: yup.string().required("Имя обязательно"),
-  phone: yup.string().required("Телефон обязателен"),
-  email: yup
-    .string()
-    .email("Неверный формат email")
-    .required("Email обязателен"),
-});
-
 const FormComponent = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -35,13 +30,11 @@ const FormComponent = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    // Отправка формы
-    console.log(data);
-  };
+  const onSubmit = async ({ email, name, phone }) =>
+    sendEmailjs({ email, phone, name }, setIsLoading);
 
   return (
-    <Container>
+    <Container isLoading={isLoading}>
       <DescriptionVisible>
         Заполните форму и наши специалисты <br /> свяжутся с вами в ближайшее
         время
@@ -81,7 +74,12 @@ const FormComponent = () => {
             {...register("email", { required: true })}
           />
         </BoxEmail>
-        <Button title="Отправить заявку" type="submit" color="#2F1F1F" />
+        <Button
+          title="Отправить заявку"
+          type="submit"
+          color="#2F1F1F"
+          isLoading={isLoading}
+        />
       </Form>
     </Container>
   );

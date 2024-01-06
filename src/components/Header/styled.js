@@ -111,14 +111,14 @@ export const ElementPhoneLink = styled.a`
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  ${({ isBurgerMenu }) =>
-    isBurgerMenu ? "color: #18161A;" : "color: #fffdf9;"}
+  ${({ data_is_burger_menu }) =>
+    data_is_burger_menu === "true" ? "color: #18161A;" : "color: #fffdf9;"}
 
   ${screenLt_1366} {
     font-size: 13px;
 
-    ${({ isBurgerMenu }) =>
-      isBurgerMenu && `font-size: 16px; font-weight: 700;`}
+    ${({ data_is_burger_menu }) =>
+      data_is_burger_menu === "true" && `font-size: 16px; font-weight: 700;`}
   }
 `;
 
