@@ -24,7 +24,7 @@ export const Container = styled.div`
   padding: 50px 60px 45px;
 
   ${(props) =>
-    props.isLoading &&
+    props.dataisloading === "true" &&
     `pointer-events: none;  
    `};
 

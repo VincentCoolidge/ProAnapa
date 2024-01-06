@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
 
   ${(props) =>
-    props.isLoading &&
+    props.dataisloading === "true" &&
     `pointer-events: none;  
    `};
 

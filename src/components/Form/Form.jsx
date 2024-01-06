@@ -34,7 +34,7 @@ const FormComponent = () => {
     sendEmailjs({ email, phone, name }, setIsLoading);
 
   return (
-    <Container isLoading={isLoading}>
+    <Container dataisloading={isLoading.toString()}>
       <DescriptionVisible>
         Заполните форму и наши специалисты <br /> свяжутся с вами в ближайшее
         время

@@ -57,7 +57,7 @@ const Modal = ({ isOpen = false, setIsOpen = () => {} }) => {
 
   return createPortal(
     <Overlay>
-      <Container isLoading={isLoading}>
+      <Container dataisloading={isLoading.toString()}>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <div style={{ position: "relative" }}>
             <Heading>Связаться с нами</Heading>

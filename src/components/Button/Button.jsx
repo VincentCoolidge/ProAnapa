@@ -8,7 +8,7 @@ const ButtonComponent = ({
   isLoading = false,
   onClick,
 }) => (
-  <Button type={type} color={color} onClick={onClick} isLoading={isLoading}>
+  <Button type={type} color={color} onClick={onClick}>
     {!isLoading ? (
       title
     ) : (

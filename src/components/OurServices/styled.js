@@ -110,7 +110,7 @@ export const BoxInfoFirst = styled.div`
   }
 `;
 
-export const Text = styled.p`
+export const Text = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
