@@ -1,4 +1,5 @@
-import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const sendEmailjs = async ({ email, name, phone }, setIsLoading) => {
   setIsLoading(true);
@@ -16,10 +17,30 @@ export const sendEmailjs = async ({ email, name, phone }, setIsLoading) => {
   };
 
   try {
-    await axios.post("https://api.emailjs.com/api/v1.0/email/send", data);
+    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    console.log("res", res);
   } catch (err) {
-    console.log("err--->", err);
   } finally {
+    toast.error(
+      `Произошла техническая ошибка...\nПопробуйте оставить заявку позже`,
+      {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+    );
     setIsLoading(false);
   }
 };

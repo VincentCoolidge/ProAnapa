@@ -53,10 +53,12 @@ const Header = () => {
             </BurgerHeader>
             <BurgerList>
               <Element>
-                <Link href="/#">Управление недвижимостью</Link>
+                <Link href="/property-management">
+                  Управление недвижимостью
+                </Link>
               </Element>
               <Element>
-                <Link href="/#">Подбор недвижимости</Link>
+                <Link href="/property-management">Подбор недвижимости</Link>
               </Element>
               <Element>
                 <Link href="/#">Продажа</Link>
@@ -98,10 +100,12 @@ const Header = () => {
             <Logo />
             <List>
               <Element>
-                <Link href="/#">Управление недвижимостью</Link>
+                <Link href="/property-management">
+                  Управление недвижимостью
+                </Link>
               </Element>
               <Element>
-                <Link href="/#">Подбор недвижимости</Link>
+                <Link href="/property-management">Подбор недвижимости</Link>
               </Element>
               <Element>
                 <Link href="/#">Продажа</Link>
